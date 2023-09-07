@@ -1,0 +1,12 @@
+<header class="header mos-primary-background-color">
+    <nav>
+        <div class="header__logo">
+            <a href="index.html">My <span>Own</span> Space</a>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="header__menu-icon">&#9776;</label>
+        <ul class="header__menu mos-primary-background-color">
+            <li *ngFor="let link of links"><a>{{link.name}}</a></li>
+        </ul>
+    </nav>
+</header>
