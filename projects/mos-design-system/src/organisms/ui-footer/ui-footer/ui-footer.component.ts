@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'mos-ui-footer',
@@ -8,7 +8,16 @@ import { Component, Input } from '@angular/core';
 export class UiFooterComponent {
   @Input() generalLinks : generalLinks[] = [];
   @Input() contactInfo : contactInfo = {title: "", buttons: []};
+  @Output() emitLinkSelected = new EventEmitter<generalLinksInfo>();
+  @Output() emitIconSelected = new EventEmitter<contactInfoButtons>();
   
+  sendLinkSelected (link : generalLinksInfo): void {
+    this.emitLinkSelected.emit(link);
+  }
+
+  sendIconSelected (icon : contactInfoButtons) : void {
+    this.emitIconSelected.emit(icon);
+  }
 
 }
 

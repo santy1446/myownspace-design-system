@@ -53,6 +53,7 @@ ul{
 	color: $mos-unselected-options;
 	display: block;
 	transition: all 0.3s ease;
+	cursor: pointer;
 }
 .mos-footer__footer-col ul li a:hover{
 	color: $mos-white-cream-color;
@@ -69,6 +70,7 @@ ul{
 	border-radius: 50%;
 	color: $mos-white-cream-color;
 	transition: all 0.5s ease;
+	cursor: pointer;
 }
 .mos-footer__footer-col .mos-footer__social-links a:hover{
 	color: $mos-social-link-hover;

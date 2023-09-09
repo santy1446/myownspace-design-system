@@ -1,4 +1,4 @@
-<mos-ui-header [links]="links">
+<mos-ui-header [links]="links" (emitElementSelected) = "showElementHeaderSelected($event)">
     <div logo>
         <a class="logo-link" href="index.html">My <span>Own</span> Space</a>
     </div>
@@ -30,7 +30,10 @@
     </div>
 </mos-ui-animated-container>
 
-<mos-ui-footer [generalLinks]="generalLinks" [contactInfo]="iconsInfo"></mos-ui-footer>
+<mos-ui-footer [generalLinks]="generalLinks" [contactInfo]="iconsInfo" 
+(emitLinkSelected) = "getLinkSelected($event)"
+(emitIconSelected) = "getIconSelected($event)">
+</mos-ui-footer>
 
 <mos-ui-modal #myModal>
     <div modalContent>

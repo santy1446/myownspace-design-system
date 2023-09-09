@@ -79,6 +79,17 @@ export class AppComponent implements AfterViewInit {
 
   showRegisterData(event : any): void{
     console.log(event);
-    
   } 
+
+  showElementHeaderSelected(event : any){
+    console.log(event);
+  }
+
+  getLinkSelected(event : any) {
+    console.log(event);
+  }
+
+  getIconSelected(event : any) {
+    console.log(event);
+  }
 }

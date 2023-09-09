@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'mos-ui-header',
@@ -7,6 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class UiHeaderComponent {
   @Input() links: Links[] = [];
+  @Output() emitElementSelected = new EventEmitter<Links>();
+
+  sendElementSelected(elm : Links) : void {
+    this.emitElementSelected.emit(elm);
+  }
 
 }
 

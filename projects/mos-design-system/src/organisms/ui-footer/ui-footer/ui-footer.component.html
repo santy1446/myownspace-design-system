@@ -5,7 +5,7 @@
                 <h4>{{category.categoryName}}</h4>
                 <ul>
                     <li *ngFor="let item of category.categoryLinks">
-                        <a href="#">{{item.name}}</a>
+                        <a (click)="sendLinkSelected(item)" >{{item.name}}</a>
                     </li>
                 </ul>
             </div>
@@ -13,7 +13,7 @@
             <div class="mos-footer__footer-col">
                 <h4>{{contactInfo.title}}</h4>
                 <div class="mos-footer__social-links">
-                    <a *ngFor="let icons of contactInfo.buttons"><i class="{{icons.icon}}"></i></a>
+                    <a *ngFor="let icons of contactInfo.buttons"><i class="{{icons.icon}}" (click)="sendIconSelected(icons)"></i></a>
                 </div>
             </div>
         </div>
