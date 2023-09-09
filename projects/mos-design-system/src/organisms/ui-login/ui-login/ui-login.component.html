@@ -1,0 +1,40 @@
+<div class="mos-auth">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="mos-signup">
+        <form [formGroup] = "singUpForm" (ngSubmit) = "onSingUpSubmit()">
+            <label for="chk" aria-hidden="true">Sign up</label>
+            <input type="email" name="email" placeholder="Email" formControlName = "singUpEmail">
+            <div class="mos-alert" *ngIf="isInvalidFormField('singUpEmail', false)">
+                <p>This email is invalid</p>
+            </div>
+            <input type="password" name="pswd" placeholder="Password" formControlName = "singUpPassword">
+            <div class="mos-alert" *ngIf="isInvalidFormField('singUpPassword', false)">
+                <p>The password must contain:</p>
+                <ul>
+                    <li>At least 8 characters</li>
+                    <li>At least one uppercase letter</li>
+                    <li>At least one lowercase letter</li>
+                    <li>At least one number and special character</li>
+                </ul>
+            </div>
+            <input type="password" name="pswd" placeholder="Confirm password" formControlName = "singUpConfirmPassword">
+            <div class="mos-alert" *ngIf="isConfirmPasswordInvalid()">
+                <p>The password doesn't match</p>
+            </div>
+            <button>Sign up</button>
+        </form>
+    </div>
+
+    <div class="mos-login">
+        <form [formGroup] = "singInForm" (ngSubmit) = "onSingInSubmit()">
+            <label for="chk" aria-hidden="true">Login</label>
+            <input type="email" name="email" placeholder="Email" formControlName = "singInEmail">
+            <div class="mos-alert" *ngIf="isInvalidFormField('singInEmail', true)">
+                <p>This email is invalid</p>
+            </div>
+            <input type="password" name="pswd" placeholder="Password" formControlName = "singInPassword">
+            <button>Login</button>
+        </form>
+    </div>
+</div>

@@ -72,4 +72,13 @@ export class AppComponent implements AfterViewInit {
   openModal() : void {
     this.myTestModal.openModal();
   }
+
+  showLoginData(event : any): void{
+    console.log(event);
+  }
+
+  showRegisterData(event : any): void{
+    console.log(event);
+    
+  } 
 }

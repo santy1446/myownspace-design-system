@@ -26,4 +26,8 @@ export * from './organisms/ui-footer/ui-footer/ui-footer.component';
 export * from './organisms/ui-modal/ui-modal.module';
 export * from './organisms/ui-modal/ui-modal/ui-modal.component';
 
+/** UI Login */
+export * from './organisms/ui-login/ui-login.module';
+export * from './organisms/ui-login/ui-login/ui-login.component';
+
 
