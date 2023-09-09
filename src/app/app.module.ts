@@ -10,7 +10,8 @@ import {
   UiHeaderModule,
   UiInputModule, 
   UiModalModule,
-  UiLoginModule
+  UiLoginModule,
+  UiLoaderModule
 } from 'projects/mos-design-system/src/public-api';
 
 @NgModule({
@@ -26,7 +27,8 @@ import {
     UiFooterModule,
     UiAnimatedContainerModule,
     UiModalModule,
-    UiLoginModule
+    UiLoginModule,
+    UiLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

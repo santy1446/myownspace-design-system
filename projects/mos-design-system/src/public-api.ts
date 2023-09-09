@@ -14,6 +14,10 @@ export * from './atoms/ui-input/ui-input-durective/ui-input.directive';
 export * from './molecules/ui-animated-container/ui-animated-container.module';
 export * from './molecules/ui-animated-container/ui-animated-container/ui-animated-container.component';
 
+/** UI Loader */
+export * from './molecules/ui-loader/ui-loader.module';
+export * from './molecules/ui-loader/ui-loader/ui-loader.component';
+
 /** UI Header */
 export * from './organisms/ui-header/ui-header.module';
 export * from './organisms/ui-header/ui-header/ui-header.component';

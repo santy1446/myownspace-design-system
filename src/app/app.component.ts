@@ -1,5 +1,5 @@
 import { Component, ViewChild , AfterViewInit } from '@angular/core';
-import { UiModalComponent } from 'projects/mos-design-system/src/public-api';
+import { UiLoaderComponent, UiModalComponent } from 'projects/mos-design-system/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { UiModalComponent } from 'projects/mos-design-system/src/public-api';
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('myModal') myTestModal: UiModalComponent = {} as any;
+  @ViewChild('myLoader') myTestLoader: UiLoaderComponent = {} as any;
 
   ngAfterViewInit() {}
 
@@ -71,6 +72,13 @@ export class AppComponent implements AfterViewInit {
 
   openModal() : void {
     this.myTestModal.openModal();
+  }
+
+  showLoader() : void {
+    this.myTestLoader.showLoader();
+    setTimeout(() => {
+      this.myTestLoader.hideLoader();
+    }, 5000);
   }
 
   showLoginData(event : any): void{
