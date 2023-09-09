@@ -1,23 +1,34 @@
-<mos-ui-header [links] = "links"></mos-ui-header>
-
-<div class="mos-general-container">
-    <button mosUiButton class="mos-button-secondary">hola</button>
-    <button mosUiButton class="mos-button-primary">hola</button>
-
-    <input mosUiInput type="text">
-    <input mosUiInput type="number">
-    <input mosUiInput type="date">
-    <select mosUiInput name="" id="">
-        <option value="">hola</option>
-        <option value="">hola2</option>
-    </select>
-
-    <div class="mos-container-card">
-        holaa
+<mos-ui-header [links]="links">
+    <div logo>
+        <a class="logo-link" href="index.html">My <span>Own</span> Space</a>
     </div>
-</div>
+</mos-ui-header>
 
-<mos-ui-footer 
-[generalLinks] = "generalLinks"
-[contactInfo] = "iconsInfo"
-></mos-ui-footer>
+<mos-ui-animated-container>
+    <div content>
+        <button mosUiButton class="mos-button-secondary" (click)="openModal()">hola</button>
+        <button mosUiButton class="mos-button-primary">hola</button>
+
+        <input mosUiInput type="text">
+        <input mosUiInput type="number">
+        <input mosUiInput type="date">
+        <select mosUiInput name="" id="">
+            <option value="">hola</option>
+            <option value="">hola2</option>
+        </select>
+
+        <div class="mos-container-card">
+            holaa
+        </div>
+        
+
+    </div>
+</mos-ui-animated-container>
+
+<mos-ui-footer [generalLinks]="generalLinks" [contactInfo]="iconsInfo"></mos-ui-footer>
+
+<mos-ui-modal #myModal>
+    <div modalContent>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat dolorem asperiores enim nesciunt aliquid at harum quae nemo pariatur doloremque, dolorum unde hic reiciendis placeat animi autem. Eveniet, veritatis.</p>
+    </div>
+</mos-ui-modal>

@@ -3,7 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UiButtonModule, UiFooterModule, UiHeaderModule, UiInputModule } from 'projects/mos-design-system/src/public-api';
+import { 
+  UiAnimatedContainerModule,
+  UiButtonModule,
+  UiFooterModule,
+  UiHeaderModule,
+  UiInputModule, 
+  UiModalModule
+} from 'projects/mos-design-system/src/public-api';
 
 @NgModule({
   declarations: [
@@ -15,7 +22,9 @@ import { UiButtonModule, UiFooterModule, UiHeaderModule, UiInputModule } from 'p
     UiButtonModule,
     UiInputModule,
     UiHeaderModule,
-    UiFooterModule
+    UiFooterModule,
+    UiAnimatedContainerModule,
+    UiModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

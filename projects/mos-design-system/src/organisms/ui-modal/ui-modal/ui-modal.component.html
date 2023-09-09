@@ -1,0 +1,19 @@
+<div *ngIf="isModalVisible" class="mos-modal">
+    <!-- Modal content -->
+    <div class="mos-modal__content">
+        <div class="mos-modal__header" >
+            <span class="mos-modal__close" id="closeButton" (click)="closeModal()">&times;</span>
+            <h2>{{titleText}}</h2>
+        </div> <!-- Modal header -->
+
+        <div class="mos-modal__body">
+            <ng-content select = "[modalContent]"></ng-content>
+        </div> <!-- Modal body -->
+
+        <div class="mos-modal__buttons" *ngIf="showButtons">
+            <button mosUiButton class="mos-button-secondary" (click)="closeModal()">{{secondaryButtonText}}</button>
+            <button mosUiButton class="mos-button-primary">{{primaryButtonText}}</button>
+        </div>
+    </div>
+
+</div>

@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild , AfterViewInit } from '@angular/core';
+import { UiModalComponent } from 'projects/mos-design-system/src/public-api';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+  @ViewChild('myModal') myTestModal: UiModalComponent = {} as any;
+
+  ngAfterViewInit() {}
+
   title = 'myownspace-design-system';
   links = [
     {
@@ -62,5 +67,9 @@ export class AppComponent {
         type: "link"
       }
     ]
+  }
+
+  openModal() : void {
+    this.myTestModal.openModal();
   }
 }
