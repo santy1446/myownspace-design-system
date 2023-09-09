@@ -9,6 +9,10 @@ export class UiHeaderComponent {
   @Input() links: Links[] = [];
   @Output() emitElementSelected = new EventEmitter<Links>();
 
+  /**
+   * Send to the client the option selected
+   * @param elm element selected
+   */
   sendElementSelected(elm : Links) : void {
     this.emitElementSelected.emit(elm);
   }
