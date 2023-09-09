@@ -1,0 +1,85 @@
+$mos-opacity-color: #fff;
+.mos-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.mos-header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mos-header__menu a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.2s all ease-in-out;
+  color: $mos-opacity-color;
+  cursor: pointer;
+}
+
+.mos-header__menu:hover a {
+  opacity: 0.4;
+}
+
+.mos-header__menu a:hover {
+  opacity: 1;
+  color: $mos-opacity-color;
+}
+
+.mos-header__menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked~.mos-header__menu {
+  transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 950px) {
+
+  .mos-header__menu {
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  .mos-header__menu a {
+    margin-left: 12px;
+  }
+
+  .mos-header__menu li {
+    margin-bottom: 10px;
+  }
+
+  .mos-header__menu-icon {
+    display: block;
+    color: $mos-opacity-color;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+}

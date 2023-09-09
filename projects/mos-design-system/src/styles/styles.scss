@@ -1,0 +1,61 @@
+@import "./variables";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.mos-box-shadow {box-shadow: $mos-box-shadow;}
+.mos-primary-background-color {background-color: $mos-primary-color;}
+
+.mos-button {
+    border-radius: 20px;
+    min-height: 33px;
+    min-width: 62px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mos-button-primary {
+    border: 1px solid $mos-border-color;
+    color: $mos-white-color;
+    background-color: $mos-primary-color;
+} 
+
+.mos-button-secondary {
+    border: 1px solid $mos-primary-color;
+    color: $mos-primary-color;
+    background-color: $mos-white-color;
+}
+
+.mos-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid $mos-primary-color;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.mos-general-container{
+    padding: 25px;
+    background-color: $mos-white-cream-color;
+}
+
+.mos-container-card {
+    min-height: 70px;
+    width: auto;
+    margin: 10px 18% 10px 18%;
+    border-radius: 11px;
+    box-shadow: $mos-box-shadow;
+    padding: 25px;
+    background-color: $mos-white-color;
+}

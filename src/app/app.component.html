@@ -1,0 +1,42 @@
+<mos-ui-header [links]="links" (emitElementSelected) = "showElementHeaderSelected($event)">
+    <div logo>
+        <a class="logo-link" href="index.html">My <span>Own</span> Space</a>
+    </div>
+</mos-ui-header>
+<mos-ui-loader #myLoader></mos-ui-loader>
+<mos-ui-animated-container>
+    <div content>
+        <button mosUiButton class="mos-button-secondary" (click)="openModal()">hola</button>
+        <button mosUiButton class="mos-button-primary" (click)="showLoader()">hola</button>
+
+        <input mosUiInput type="text">
+        <input mosUiInput type="number">
+        <input mosUiInput type="date">
+        <select mosUiInput name="" id="">
+            <option value="">hola</option>
+            <option value="">hola2</option>
+        </select>
+
+        <div class="mos-container-card">
+            holaa
+        </div>
+
+        <mos-ui-login 
+            (emitRegisterData) = "showRegisterData($event)" 
+            (emitLoginData) = "showLoginData($event)">
+        </mos-ui-login>
+        
+
+    </div>
+</mos-ui-animated-container>
+
+<mos-ui-footer [generalLinks]="generalLinks" [contactInfo]="iconsInfo" 
+(emitLinkSelected) = "getLinkSelected($event)"
+(emitIconSelected) = "getIconSelected($event)">
+</mos-ui-footer>
+
+<mos-ui-modal #myModal>
+    <div modalContent>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat dolorem asperiores enim nesciunt aliquid at harum quae nemo pariatur doloremque, dolorum unde hic reiciendis placeat animi autem. Eveniet, veritatis.</p>
+    </div>
+</mos-ui-modal>

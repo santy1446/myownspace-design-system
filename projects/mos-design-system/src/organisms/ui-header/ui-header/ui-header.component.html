@@ -1,0 +1,12 @@
+<header class="mos-header mos-primary-background-color">
+    <nav>
+        <div class="mos-header__logo">
+            <ng-content select = "[logo]"></ng-content>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="mos-header__menu-icon">&#9776;</label>
+        <ul class="mos-header__menu mos-primary-background-color">
+            <li *ngFor="let link of links"><a (click)="sendElementSelected(link)">{{link.name}}</a></li>
+        </ul>
+    </nav>
+</header>

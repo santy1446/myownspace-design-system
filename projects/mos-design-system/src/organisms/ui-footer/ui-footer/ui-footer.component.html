@@ -1,0 +1,21 @@
+<footer class="mos-footer">
+    <div class="mos-footer__container">
+        <div class="row">
+            <div class="mos-footer__footer-col" *ngFor="let category of generalLinks">
+                <h4>{{category.categoryName}}</h4>
+                <ul>
+                    <li *ngFor="let item of category.categoryLinks">
+                        <a (click)="sendLinkSelected(item)" >{{item.name}}</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="mos-footer__footer-col">
+                <h4>{{contactInfo.title}}</h4>
+                <div class="mos-footer__social-links">
+                    <a *ngFor="let icons of contactInfo.buttons"><i class="{{icons.icon}}" (click)="sendIconSelected(icons)"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

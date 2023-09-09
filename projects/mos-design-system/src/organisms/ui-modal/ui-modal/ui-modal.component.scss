@@ -1,0 +1,58 @@
+@import "../../../styles/variables";
+
+.mos-modal {
+    display: block;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    .mos-modal__content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        width: 80%;
+        border-radius: 30px;
+        border: 5px solid $mos-secondary-color;
+        .mos-modal__header{
+            min-height: 40px;
+            padding: 20px;
+            background-color: $mos-secondary-color;
+            border-radius: 13px 13px 0px 0px;
+            color: $mos-white-cream-color;
+            .mos-modal__close {
+                color: $mos-border-color;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        .mos-modal__body {
+            padding: 25px;
+        }
+        .mos-modal__buttons {
+            padding: 12px;
+            display: flex;
+            justify-content: right;
+            border-top: 1px solid $mos-border-color;
+            
+            .mos-button-primary {
+                margin-left: 15px;
+            }
+        }
+        
+    }
+}
+
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
