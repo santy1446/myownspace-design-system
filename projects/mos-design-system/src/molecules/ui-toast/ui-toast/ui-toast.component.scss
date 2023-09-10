@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+
+.mos-toasts-container {
+    position: fixed;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 5;
+
+    .mos-toasts-container__toast {
+        background-color: $mos-white-color;
+        border-radius: 30px;
+        padding: 1rem 2rem;
+        margin: 0.5rem;
+        border: 2px solid;
+        z-index: 4;
+    }
+    
+    .mos-toasts-container__toast.info {
+        color: $mos-secondary-color;
+    }
+    
+    .mos-toasts-container__toast.success {
+        color: $mos-success-color;
+    }
+    
+    .mos-toasts-container__toast.error {
+        color: $mos-error-red-color;
+    }
+}
+

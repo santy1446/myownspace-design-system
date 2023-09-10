@@ -18,6 +18,10 @@ export * from './molecules/ui-animated-container/ui-animated-container/ui-animat
 export * from './molecules/ui-loader/ui-loader.module';
 export * from './molecules/ui-loader/ui-loader/ui-loader.component';
 
+/** UI Toast */
+export * from './molecules/ui-toast/ui-toast.module';
+export * from './molecules/ui-toast/ui-toast/ui-toast.component';
+
 /** UI Header */
 export * from './organisms/ui-header/ui-header.module';
 export * from './organisms/ui-header/ui-header/ui-header.component';

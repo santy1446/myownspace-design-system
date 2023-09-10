@@ -6,8 +6,10 @@
 <mos-ui-loader #myLoader></mos-ui-loader>
 <mos-ui-animated-container>
     <div content>
-        <button mosUiButton class="mos-button-secondary" (click)="openModal()">hola</button>
-        <button mosUiButton class="mos-button-primary" (click)="showLoader()">hola</button>
+        <mos-ui-toast #myToast></mos-ui-toast>
+        <button mosUiButton class="mos-button-secondary" (click)="openModal()">Modal</button>
+        <button mosUiButton class="mos-button-primary" (click)="showLoader()">Loader</button>
+        <button mosUiButton class="mos-button-primary" (click)="showToast()">Toast</button>
 
         <input mosUiInput type="text">
         <input mosUiInput type="number">
