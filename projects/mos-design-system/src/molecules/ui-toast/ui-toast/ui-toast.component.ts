@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mos-ui-toast',
@@ -6,9 +6,14 @@ import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
   styleUrls: ['./ui-toast.component.scss']
 })
 export class UiToastComponent {
-  messageTypes: string[] = ['info', 'success', 'error'];
   notificationArray: ToastConfiguration[] = [];
 
+  /**
+   * Show a notification
+   * @param type success, info or error 
+   * @param message Message to show
+   * @param duration duration in miliseconds
+   */
   createNotification(type: string, message: string, duration: number): void {
     const notification: ToastConfiguration = {
       id: Date.now() + Math.random(), //unique identifier
@@ -21,6 +26,11 @@ export class UiToastComponent {
     this.deleteNotification(notification.id, duration);
   }
 
+  /**
+   * Delete notification
+   * @param id notification id 
+   * @param duration duration on screen
+   */
   private deleteNotification(id: number, duration: number): void {
     setTimeout(() => {
       const index = this.notificationArray.findIndex(toast => toast.id === id)
