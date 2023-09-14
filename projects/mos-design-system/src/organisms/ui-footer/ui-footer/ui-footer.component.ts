@@ -11,10 +11,18 @@ export class UiFooterComponent {
   @Output() emitLinkSelected = new EventEmitter<generalLinksInfo>();
   @Output() emitIconSelected = new EventEmitter<contactInfoButtons>();
   
+  /**
+   * Send to the client the link selected
+   * @param link link selected
+   */
   sendLinkSelected (link : generalLinksInfo): void {
     this.emitLinkSelected.emit(link);
   }
 
+  /**
+   * Send to the client the icon selected
+   * @param icon icon selected
+   */
   sendIconSelected (icon : contactInfoButtons) : void {
     this.emitIconSelected.emit(icon);
   }

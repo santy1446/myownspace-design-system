@@ -1,5 +1,5 @@
 import { Component, ViewChild , AfterViewInit } from '@angular/core';
-import { UiLoaderComponent, UiModalComponent } from 'projects/mos-design-system/src/public-api';
+import { UiLoaderComponent, UiModalComponent, UiToastComponent } from 'projects/mos-design-system/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,7 @@ import { UiLoaderComponent, UiModalComponent } from 'projects/mos-design-system/
 export class AppComponent implements AfterViewInit {
   @ViewChild('myModal') myTestModal: UiModalComponent = {} as any;
   @ViewChild('myLoader') myTestLoader: UiLoaderComponent = {} as any;
+  @ViewChild('myToast') myToast: UiToastComponent = {} as any;
 
   ngAfterViewInit() {}
 
@@ -98,6 +99,30 @@ export class AppComponent implements AfterViewInit {
   }
 
   getIconSelected(event : any) {
+    console.log(event);
+  }
+
+  showToast(): void {
+    this.myToast.createNotification(
+      'success',
+      'Su información fue guardada correctamente',
+      3000
+    );
+
+    this.myToast.createNotification(
+      'error',
+      'Ha ocurrido un error, por favor intente más tarde',
+      3000
+    );
+
+    this.myToast.createNotification(
+      'info',
+      'Está seguro?',
+      3000
+    );
+  }
+
+  acceptButtonModal(event : boolean): void {
     console.log(event);
   }
 }

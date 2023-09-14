@@ -1,0 +1,7 @@
+{
+    "include": ["projects/mos-design-system/src/**/*.ts"],
+    "exclude": [
+        "projects/mos-design-system/src/test.ts",
+        "projects/mos-design-system/src/**/*.spec.ts"
+    ]
+}
