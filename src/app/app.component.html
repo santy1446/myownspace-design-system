@@ -37,7 +37,7 @@
 (emitIconSelected) = "getIconSelected($event)">
 </mos-ui-footer>
 
-<mos-ui-modal #myModal>
+<mos-ui-modal #myModal (emitAcceptButton) = "acceptButtonModal($event)">
     <div modalContent>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat dolorem asperiores enim nesciunt aliquid at harum quae nemo pariatur doloremque, dolorum unde hic reiciendis placeat animi autem. Eveniet, veritatis.</p>
     </div>

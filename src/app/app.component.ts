@@ -121,4 +121,8 @@ export class AppComponent implements AfterViewInit {
       3000
     );
   }
+
+  acceptButtonModal(event : boolean): void {
+    console.log(event);
+  }
 }

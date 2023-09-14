@@ -20,4 +20,15 @@ describe('UiHeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit emitElementSelected when sendElementSelected is called', () => {
+    const EMIT_SPY = spyOn(component.emitElementSelected, "emit");
+    const LINK_SELECTED = {
+      name: "test",
+      route: "test",
+      type: undefined
+    };
+    component.sendElementSelected(LINK_SELECTED);
+    expect(EMIT_SPY).toHaveBeenCalled();
+  });
 });

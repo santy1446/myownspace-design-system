@@ -20,4 +20,14 @@ describe('UiLoaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('isLoaderVisible should be true when showLoader is called', () => {
+    component.showLoader();
+    expect(component.isLoaderVisible).toBeTruthy();
+  });
+
+  it('isLoaderVisible should be false when hideLoader is called', () => {
+    component.hideLoader();
+    expect(component.isLoaderVisible).toBeFalsy();
+  });
 });

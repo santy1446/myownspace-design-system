@@ -12,7 +12,7 @@
 
         <div class="mos-modal__buttons" *ngIf="showButtons">
             <button mosUiButton class="mos-button-secondary" (click)="closeModal()">{{secondaryButtonText}}</button>
-            <button mosUiButton class="mos-button-primary">{{primaryButtonText}}</button>
+            <button mosUiButton class="mos-button-primary" (click)="acceptClickButton()">{{primaryButtonText}}</button>
         </div>
     </div>
 

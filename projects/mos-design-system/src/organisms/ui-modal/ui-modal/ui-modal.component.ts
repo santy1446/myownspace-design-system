@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'mos-ui-modal',
@@ -11,6 +11,8 @@ export class UiModalComponent {
   @Input() primaryButtonText: string = "Aceptar";
   @Input() secondaryButtonText: string = "Cancelar";
   @Input() titleText: string = "Title";
+  @Output() emitAcceptButton = new EventEmitter<boolean>();
+
   isModalVisible : boolean = false;
 
   /**
@@ -22,5 +24,10 @@ export class UiModalComponent {
    * Close mos Modal
    */
   closeModal(): void { this.isModalVisible = false; }
+
+  /**
+   * Accept button event
+   */
+  acceptClickButton(): void { this.emitAcceptButton.emit(true) ;}
 
 }
