@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'mos-ui-header',
@@ -9,11 +9,14 @@ export class UiHeaderComponent {
   @Input() links: Links[] = [];
   @Output() emitElementSelected = new EventEmitter<Links>();
 
+  toggleCheck: boolean = false;
+
   /**
    * Send to the client the option selected
    * @param elm element selected
    */
   sendElementSelected(elm : Links) : void {
+    this.toggleCheck = false
     this.emitElementSelected.emit(elm);
   }
 

@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UiHeaderComponent } from './ui-header/ui-header.component';
@@ -9,7 +10,8 @@ import { UiHeaderComponent } from './ui-header/ui-header.component';
     UiHeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [UiHeaderComponent]
 })

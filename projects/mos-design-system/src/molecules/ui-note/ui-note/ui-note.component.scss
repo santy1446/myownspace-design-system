@@ -1,0 +1,83 @@
+@import "../../../styles/variables";
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.mos-note-container {
+    width: 290px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: $mos-box-shadow;
+    background-color: $mos-white-color;
+    margin: 20px;
+
+    .mos-note-container__header {
+        background-color: $mos-primary-color;
+        min-height: 12%;
+        padding: 10px;
+        color: $mos-white-cream-color;
+        border-radius: 10px 10px 0px 0px;
+        display: flex;
+
+        p,
+        input {
+            width: 74%;
+            margin-right: 19px;
+            background-color: $mos-primary-color;
+            color: $mos-white-cream-color;
+            border: 0;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        input::placeholder {
+            color: $mos-white-cream-color;
+        }
+
+        a:nth-child(1) {
+            margin-right: 18px;
+        }
+
+        a {
+            cursor: pointer;
+            i {
+                color: $mos-white-color;
+            }
+        }
+    }
+
+    .mos-note-container__body {
+        overflow-y: auto;
+        height: 86%;
+        padding: 10px;
+
+        textarea {
+            width: 100%;
+            height: 98%;
+            resize: none;
+            font-size: 1.2rem;
+            border: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .mos-note-container {
+        width: 100%;
+        margin: 0px;
+
+        .mos-note-container__header {
+
+            p,
+            input {
+                width: 58%;
+            }
+        }
+    }
+}
