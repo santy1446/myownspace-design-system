@@ -22,6 +22,10 @@ export * from './molecules/ui-loader/ui-loader/ui-loader.component';
 export * from './molecules/ui-toast/ui-toast.module';
 export * from './molecules/ui-toast/ui-toast/ui-toast.component';
 
+/** UI Note */
+export * from './molecules/ui-note/ui-note.module';
+export * from './molecules/ui-note/ui-note/ui-note.component';
+
 /** UI Header */
 export * from './organisms/ui-header/ui-header.module';
 export * from './organisms/ui-header/ui-header/ui-header.component';

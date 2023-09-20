@@ -1,0 +1,16 @@
+<div id="mos-note-{{noteData.id}}" class="mos-note-container">
+    <div class="mos-note-container__header">
+        <p *ngIf="!isEditing">{{noteData.title}}</p>
+        <input type="text" placeholder="Write the title here" maxlength="26" *ngIf="isEditing" [(ngModel)]="noteData.title">
+        <div>
+            <a *ngIf="!isEditing"><i class="fas fa-edit" (click)="isEditing=true"></i></a>
+            <a *ngIf="isEditing"><i class="fas fa-save" (click)="onSave()"></i></a>
+            <a><i class="fas fa-trash" (click)="onDelete()"></i></a>
+        </div>
+    </div>
+    <div class="mos-note-container__body">
+        <p *ngIf="!isEditing">{{noteData.body}}</p>
+
+        <textarea placeholder="Write a note!" name="note body" id="" cols="30" rows="10" *ngIf="isEditing" [(ngModel)]="noteData.body"></textarea>
+    </div>
+</div>

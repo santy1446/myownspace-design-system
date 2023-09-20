@@ -1,5 +1,5 @@
 import { Component, ViewChild , AfterViewInit } from '@angular/core';
-import { UiLoaderComponent, UiModalComponent, UiToastComponent } from 'projects/mos-design-system/src/public-api';
+import { UiLoaderComponent, UiModalComponent, UiToastComponent, NoteData } from 'projects/mos-design-system/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -71,6 +71,12 @@ export class AppComponent implements AfterViewInit {
     ]
   }
 
+  noteData: NoteData = {
+    id: 'qwe123',
+    title: 'Note title',
+    body: 'This is a note body'
+  }
+
   openModal() : void {
     this.myTestModal.openModal();
   }
@@ -124,5 +130,13 @@ export class AppComponent implements AfterViewInit {
 
   acceptButtonModal(event : boolean): void {
     console.log(event);
+  }
+
+  onSaveNote(note: NoteData){
+    console.log(note);
+  }
+
+  onDeleteNote(note: NoteData | boolean) {
+    console.log(note);
   }
 }
