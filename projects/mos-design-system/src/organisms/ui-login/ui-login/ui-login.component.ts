@@ -16,6 +16,7 @@ export class UiLoginComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.singUpForm = formBuilder.group({
+      singUpUser: ['', [Validators.required]],
       singUpEmail: ['', [Validators.required, Validators.email]],
       singUpPassword: ['', [Validators.required, Validators.pattern(this.regexPassword)]],
       singUpConfirmPassword: ['', [Validators.required, Validators.pattern(this.regexPassword)]],
@@ -71,6 +72,7 @@ export class UiLoginComponent {
 }
 
 export interface RegisterData  {
+  singUpUser: string;
   singUpEmail: string;
   singUpPassword: string;
   singUpConfirmPassword: string;
