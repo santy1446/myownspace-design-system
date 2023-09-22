@@ -4,6 +4,7 @@
     <div class="mos-signup">
         <form [formGroup] = "singUpForm" (ngSubmit) = "onSingUpSubmit()">
             <label for="chk" aria-hidden="true">Sign up</label>
+            <input type="text" name="username" placeholder="User name" formControlName = "singUpUser">
             <input type="email" name="email" placeholder="Email" formControlName = "singUpEmail">
             <div class="mos-alert" *ngIf="isInvalidFormField('singUpEmail', false)">
                 <p>This email is invalid</p>
@@ -22,7 +23,7 @@
             <div class="mos-alert" *ngIf="isConfirmPasswordInvalid()">
                 <p>The password doesn't match</p>
             </div>
-            <button>Sign up</button>
+            <button [disabled]="!singUpForm.valid">Sign up</button>
         </form>
     </div>
 
