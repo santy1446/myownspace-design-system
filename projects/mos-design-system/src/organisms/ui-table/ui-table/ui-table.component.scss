@@ -1,0 +1,100 @@
+@import "../../../styles/variables";
+
+.mos-table-container {
+    max-width: 1200px;
+    margin: 30px auto 0px auto;
+    overflow-x: auto;
+    .mos-table-container__align-right {
+        text-align: right;
+    }
+    .mos-table-container__align-left {
+        text-align: left;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 14px;
+        text-align: left;
+        background-color: #fff;
+        .mos-table-container__actions-column {
+            width: 83px;
+            text-align: center;
+            position: relative;
+            i {
+                cursor: pointer;
+            }
+            ul {
+                position: absolute;
+                background-color: $mos-white-color;
+                padding: 12px;
+                right: 63px;
+                top: 6px;
+                min-width: 180px;
+                width: auto;
+                text-align: left;
+
+                li {
+                    padding: 10px 0px;
+                    cursor: pointer;
+                    i {
+                        margin: 0px 15px;
+                    }
+                }
+                li:hover {
+                    background-color: $mos-white-cream-color;
+                }
+            }
+        }
+
+        th {
+            background-color: $mos-primary-color;
+            color: $mos-white-cream-color;
+            border: 1px solid $mos-primary-color;
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        tr:nth-child(odd) {
+            background-color: $mos-table-row-color;
+        }
+        tr:nth-child(even) {
+            background-color: $mos-white-color;
+        }
+        td {
+            border: 1px solid $mos-table-row-color;
+            padding: 10px;
+        }
+        tr:hover {
+            background-color: $mos-table-row-color-hover;
+        }
+    }
+}
+
+.mos-pagination-section{
+    max-width: 1200px;
+    padding: 15px;
+    background-color: $mos-white-color;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px auto 30px auto;
+    .pagination {
+        button {
+            width: 40px;
+            height: 31px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-right: 6px;
+            padding-bottom: 25px;
+        }
+    }
+    .mos-pagination-section__element-count {
+        margin-right: 15px;
+        select {
+            margin: 0;
+            padding: 9px;
+        }
+    }
+}
+
