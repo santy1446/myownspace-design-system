@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiHeaderComponent } from './ui-header.component';
+import { FormsModule } from '@angular/forms';
 
 describe('UiHeaderComponent', () => {
   let component: UiHeaderComponent;
@@ -8,7 +9,8 @@ describe('UiHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UiHeaderComponent ]
+      declarations: [ UiHeaderComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
 

@@ -30,9 +30,9 @@
     <div class="mos-login">
         <form [formGroup] = "singInForm" (ngSubmit) = "onSingInSubmit()">
             <label for="chk" aria-hidden="true">Login</label>
-            <input type="text" name="user" placeholder="Username" formControlName = "singInUser">
-            <div class="mos-alert" *ngIf="isInvalidFormField('singInUser', true)">
-                <p>This field is required</p>
+            <input type="text" name="user" placeholder="Email" formControlName = "singInEmail">
+            <div class="mos-alert" *ngIf="isInvalidFormField('singInEmail', true)">
+                <p>This email is invalid</p>
             </div>
             <input type="password" name="pswd" placeholder="Password" formControlName = "singInPassword">
             <button>Login</button>

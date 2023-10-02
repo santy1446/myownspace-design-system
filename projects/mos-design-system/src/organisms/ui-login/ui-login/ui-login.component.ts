@@ -23,7 +23,7 @@ export class UiLoginComponent {
     });
 
     this.singInForm = formBuilder.group({
-      singInUser: ['', [Validators.required]],
+      singInEmail: ['', [Validators.required, Validators.email]],
       singInPassword: ['', [Validators.required]],
     })
   }
@@ -79,6 +79,6 @@ export interface RegisterData  {
 }
 
 export interface LoginData  {
-  singInUser: string;
+  singInEmail: string;
   singInPassword: string;
 }

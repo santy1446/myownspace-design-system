@@ -13,10 +13,10 @@ export class UiTableComponent implements OnInit {
   @Input() items: any[] = [];
   @Output() emitElementSelected = new EventEmitter<OptionSelected>();
   
-  totalItems = this.items.length; // Total de elementos
-  currentPage = 1; // Página actual
-  sortBy = ''; // Columna por la que se ordena
-  sortOrder = 'asc'; // Orden ascendente o descendente
+  totalItems = this.items.length;
+  currentPage = 1;
+  sortBy = '';
+  sortOrder = 'asc';
 
   ngOnInit(): void {
     this.resetActionsStatus();
@@ -29,12 +29,10 @@ export class UiTableComponent implements OnInit {
     }));
   }
 
-  // Cambio de página
   pageChanged(event: number): void {
     this.currentPage = event;
   }
 
-  // Ordenamiento de datos
   sortData(column: string) {
     if (this.sortBy === column) {
       this.sortOrder = this.sortOrder === 'asc' ? 'desc' : 'asc';
@@ -43,7 +41,6 @@ export class UiTableComponent implements OnInit {
       this.sortOrder = 'asc';
     }
 
-    // Implementa tu lógica de ordenamiento aquí
     this.items.sort((a, b) => {
       const aValue = a[this.sortBy];
       const bValue = b[this.sortBy];
