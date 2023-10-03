@@ -20,6 +20,8 @@
             <option value="">hola2</option>
         </select>
 
+        <mos-ui-contact-card [contactInfo]="contactCard" (emitAction)="contactAction($event)"></mos-ui-contact-card>
+
         <mos-ui-table [tableHeaders]="tableHeader" [tableOptions]="tableOptions" [items]="tableItems" (emitElementSelected)="optionTableSelected($event)"></mos-ui-table>
 
         <div class="mos-container-card">

@@ -1,7 +1,8 @@
 @import "../../../styles/variables";
+$table-max-width: 1400px;
 
 .mos-table-container {
-    max-width: 1200px;
+    max-width: $table-max-width;
     margin: 30px auto 0px auto;
     overflow-x: auto;
     .mos-table-container__align-right {
@@ -73,7 +74,7 @@
 }
 
 .mos-pagination-section{
-    max-width: 1200px;
+    max-width: $table-max-width;
     padding: 15px;
     background-color: $mos-white-color;
     display: flex;
