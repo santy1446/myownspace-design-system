@@ -11,6 +11,7 @@ export class UiModalComponent {
   @Input() primaryButtonText: string = "Aceptar";
   @Input() secondaryButtonText: string = "Cancelar";
   @Input() titleText: string = "Title";
+  @Input() size: "spm" | "sm" | "md" | "lg" = "spm";
   @Output() emitAcceptButton = new EventEmitter<boolean>();
 
   isModalVisible : boolean = false;

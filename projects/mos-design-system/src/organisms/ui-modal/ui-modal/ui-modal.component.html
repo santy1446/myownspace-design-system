@@ -1,13 +1,14 @@
 <div *ngIf="isModalVisible" class="mos-modal">
     <!-- Modal content -->
-    <div class="mos-modal__content">
-        <div class="mos-modal__header" >
+    <div class="mos-modal__content"
+        [ngClass]="size === 'spm' ? 'mos-modal__content--super-small' : size === 'sm' ? 'mos-modal__content--small' : size === 'md' ? 'mos-modal__content--medium' : 'mos-modal__content--large'">
+        <div class="mos-modal__header">
             <span class="mos-modal__close" id="closeButton" (click)="closeModal()">&times;</span>
             <h2>{{titleText}}</h2>
         </div> <!-- Modal header -->
 
         <div class="mos-modal__body">
-            <ng-content select = "[modalContent]"></ng-content>
+            <ng-content select="[modalContent]"></ng-content>
         </div> <!-- Modal body -->
 
         <div class="mos-modal__buttons" *ngIf="showButtons">

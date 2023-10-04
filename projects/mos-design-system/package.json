@@ -1,6 +1,6 @@
 {
   "name": "mos-design-system",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "build:sass": "sass src/styles/styles.scss src/assets/styles.min.css --style compressed"
   },
