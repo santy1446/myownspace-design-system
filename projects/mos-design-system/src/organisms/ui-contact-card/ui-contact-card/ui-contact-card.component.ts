@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class UiContactCardComponent {
 
-  @Input() contactInfo : ContactData;
+  @Input() contactInfo : ContactData = {} as any;
   @Output() emitAction = new EventEmitter<ContactDataAction>();
 
   onEmitAction(action: "edit" | "delete", contact: ContactData) {
