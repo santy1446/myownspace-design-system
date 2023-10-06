@@ -1,0 +1,166 @@
+@import "../../../styles/variables";
+$mos-hover-background: #fdf1ff;
+
+.mos-card {
+    position: relative;
+    width: 535px;
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid $mos-social-link-background;
+    border-radius: 25px;
+    box-shadow: $mos-box-shadow;
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    background-color: $mos-white-color;
+
+    .mos-card__card-icons {
+        display: flex;
+        position: absolute;
+        right: 26px;
+        top: 12px;
+
+        i {
+            font-size: 22px;
+            cursor: pointer;
+        }
+        i:nth-child(1) {
+            color: $mos-primary-color;
+        }
+        i:nth-child(2) {
+            margin-left: 15px;
+            color: $mos-orange-color;
+        }
+    }
+
+    img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+        float: left;
+        border-radius: 50%;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s ease-in-out;
+        margin: 0 auto;
+    }
+
+    .mos-card__details {
+        display: flex;
+        float: left;
+        text-align: left;
+        transition: all 0.5s ease-in-out;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0);
+        min-width: 250px;
+        margin-top: 20px;
+        min-width: 0;
+
+        a {
+            color: $mos-secondary-color;
+            transition: color 0.5s ease-in-out;
+        }
+
+        ul {
+            li {
+                margin: 0px 0px 17px 17px;
+            }
+        }
+
+        .mos-card__info {
+            margin-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 363px;
+        }
+        .mos-card__icons {
+            margin-left: 10px;
+        }
+
+    }
+
+    &:hover {
+        background: $mos-hover-background;
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.03);
+
+        img {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .mos-card__details {
+            transition: all 0.5s ease-in-out;
+            text-shadow: 1px 1px $mos-white-color;
+        }
+    }
+}
+
+.mos-card:after,
+.mos-card:before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mos-card .mos-card__details>span,
+.mos-card .mos-card__details>a {
+    display: block;
+    padding: 0 15px 0 35px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.mos-card .mos-card__details a:hover,
+.mos-card .mos-card__details a:focus {
+    color: $mos-orange-color;
+    transition: color 0.5s ease-in-out;
+}
+
+@media(max-width:950px) {
+
+    .mos-card {
+        display: block;
+        width: auto;
+        max-width: 200px;
+        margin: 30px auto;
+        
+        img,
+        .mos-card__details {
+            float: none;
+        }
+
+        img {
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .mos-card__details {
+            margin-top: 20px;
+            min-width: 0;
+            display: block;
+
+            .mos-card__icons {
+                display: none;
+            }
+
+            .mos-card__info {
+                display: inline;
+                word-break: break-all;
+                li {
+                    word-break: break-all;
+                    white-space: normal;
+                    margin-left: 0;
+                }
+                span,
+                a {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+}

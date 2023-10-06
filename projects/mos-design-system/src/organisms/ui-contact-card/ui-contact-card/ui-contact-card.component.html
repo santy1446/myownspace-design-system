@@ -1,0 +1,36 @@
+<div class="mos-card">
+    
+    <img [src]="contactInfo.img" alt="profile-picture" />
+    <div class="mos-card__details">
+        <ul class="mos-card__icons">
+            <li><i class="fas fa-user"></i> </li>
+            <li><i class="fas fa-user-cog"></i></li>
+            <li><i class="fas fa-phone"></i></li>
+            <li><i class="fas fa-envelope"></i></li>
+        </ul>
+
+        <ul class="mos-card__info">
+            <li>
+                <span>{{contactInfo.name}}</span>
+            </li>
+            <li>
+                <span>{{contactInfo.job}}</span>
+            </li>
+            <li>
+                <a href="tel:123-456-789">{{contactInfo.phone}}</a>
+            </li>
+            <li>
+                <a href="mailto:emilia.jacobs@email.com">
+                    {{contactInfo.email}}
+                </a>
+            </li>
+            
+        </ul>
+
+    </div>
+    <div class="mos-card__card-icons">
+        <i class="fas fa-edit" (click)="onEmitAction('edit', contactInfo)"></i>
+        <i class="fas fa-trash" (click)="onEmitAction('delete', contactInfo)"></i>
+    </div>
+
+</div>

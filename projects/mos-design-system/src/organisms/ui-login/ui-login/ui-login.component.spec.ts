@@ -21,6 +21,7 @@ describe('UiLoginComponent', () => {
 
   beforeEach(() => {
     component.singUpForm.setValue({
+      singUpUser: "UserExample",
       singUpEmail: "example@gmail.com",
       singUpPassword: "ExamplePassword$123",
       singUpConfirmPassword: "ExamplePassword$123",

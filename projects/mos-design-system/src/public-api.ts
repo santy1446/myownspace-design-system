@@ -42,4 +42,12 @@ export * from './organisms/ui-modal/ui-modal/ui-modal.component';
 export * from './organisms/ui-login/ui-login.module';
 export * from './organisms/ui-login/ui-login/ui-login.component';
 
+/** UI Table */
+export * from './organisms/ui-table/ui-table.module';
+export * from './organisms/ui-table/ui-table/ui-table.component';
+
+/** UI Contact Card */
+export * from './organisms/ui-contact-card/ui-contact-card.module';
+export * from './organisms/ui-contact-card/ui-contact-card/ui-contact-card.component';
+
 

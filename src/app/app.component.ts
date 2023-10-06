@@ -1,5 +1,5 @@
 import { Component, ViewChild , AfterViewInit } from '@angular/core';
-import { UiLoaderComponent, UiModalComponent, UiToastComponent, NoteData } from 'projects/mos-design-system/src/public-api';
+import { UiLoaderComponent, UiModalComponent, UiToastComponent, NoteData, TableHeaders, OptionsAvailable, ContactData, ContactDataAction } from 'projects/mos-design-system/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -77,6 +77,94 @@ export class AppComponent implements AfterViewInit {
     body: 'This is a note body'
   }
 
+  tableHeader: TableHeaders[] = [
+    {
+      label: "Name",
+      keyName: "name",
+      type: 'text'
+    },
+    {
+      label: "Last name",
+      keyName: "last_name",
+      type: 'text'
+    },
+    {
+      label: "Age",
+      keyName: "age",
+      type: 'numbers'
+    },
+    {
+      label: "City",
+      keyName: "city",
+      type: 'text'
+    },
+  ];
+
+  tableOptions: OptionsAvailable[] = [
+    {
+      label: "View details",
+      icon: "fas fa-info"
+    },
+    {
+      label: "Delete",
+      icon: "fas fa-trash"
+    }
+  ]
+
+  tableItems: any[] = [
+    {
+      name: "Santy",
+      last_name: "Tapasco",
+      age: 24,
+      city: "Manizales"
+    },
+    {
+      name: "Santy",
+      last_name: "Tapasco",
+      age: 24,
+      city: "Manizales"
+    },
+    {
+      name: "Santy",
+      last_name: "Tapasco",
+      age: 24,
+      city: "Manizales"
+    },
+    {
+      name: "Santy",
+      last_name: "Tapasco",
+      age: 24,
+      city: "Manizales"
+    },
+    {
+      name: "Santy",
+      last_name: "Tapasco",
+      age: 24,
+      city: "Manizales"
+    },
+    {
+      name: "Santy",
+      last_name: "Tapasco",
+      age: 24,
+      city: "Manizales"
+    }
+  ]
+
+  contactCard: ContactData = {
+    id: "123",
+    email: "santy1446@gmail.com",
+    job: "Software developer",
+    name: "Santiago Tapasco Giraldo",
+    phone: "300000000",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkdPUrvq_PqcJ6xThm45NFBRnGYPElU28gAw&usqp=CAU"
+  }
+
+  contactAction(data: ContactDataAction) {
+    console.log(data);
+    
+  }
+
+
   openModal() : void {
     this.myTestModal.openModal();
   }
@@ -138,5 +226,10 @@ export class AppComponent implements AfterViewInit {
 
   onDeleteNote(note: NoteData | boolean) {
     console.log(note);
+  }
+
+  optionTableSelected(data: any) {
+    console.log(data);
+    
   }
 }

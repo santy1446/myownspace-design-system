@@ -13,7 +13,9 @@ import {
   UiLoginModule,
   UiLoaderModule,
   UiToastModule,
-  UiNoteModule
+  UiNoteModule,
+  UiTableModule,
+  UiContactCardModule
 } from 'projects/mos-design-system/src/public-api';
 
 @NgModule({
@@ -32,7 +34,9 @@ import {
     UiLoginModule,
     UiLoaderModule,
     UiToastModule,
-    UiNoteModule
+    UiNoteModule,
+    UiTableModule,
+    UiContactCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

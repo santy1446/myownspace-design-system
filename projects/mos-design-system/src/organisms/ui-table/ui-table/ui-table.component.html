@@ -1,0 +1,48 @@
+<section class="mos-table-container">
+    <table> 
+        <thead>
+            <tr>
+                <th *ngFor="let header of tableHeaders" (click)="sortData(header.keyName)"
+                [ngClass]="header.type === 'text' ? 'mos-table-container__align-left' : 'mos-table-container__align-right'">
+                    {{header.label}}
+                    <span *ngIf="sortBy === header.keyName && sortOrder === 'asc'">&#9650;</span>
+                    <span *ngIf="sortBy === header.keyName && sortOrder === 'desc'">&#9660;</span>
+                </th>
+
+                <th class="mos-table-container__actions-column" *ngIf="tableOptions.length > 0">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage); let indexOfelement = index;">
+
+                <td *ngFor="let header of tableHeaders" [ngClass]="header.type === 'text' ? 'mos-table-container__align-left' : 'mos-table-container__align-right'">
+                    {{ getDataToShow(item, header) }}
+                </td>
+                <td *ngIf="tableOptions.length > 0" class="mos-table-container__actions-column">
+                    <i class="fas fa-ellipsis-v" (click)="clickOptionsButton(item)"></i>
+                    <ul *ngIf="item.showOptions">
+                        <li *ngFor="let option of tableOptions" (click)="sendElementSelected(item, option)">
+                            <i class="{{option.icon}}"></i>
+                            {{option.label}}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<div class="mos-pagination-section">
+    <div class="mos-pagination-section__element-count">
+        <select mosUiInput [(ngModel)]="itemsPerPage">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+    <div class="pagination">
+        <button mosUiButton class="mos-button-primary" [disabled]="currentPage === 1"
+            (click)="pageChanged(currentPage - 1)"><</button>
+        <button mosUiButton class="mos-button-primary" [disabled]="currentPage === getNumberOfPages()"
+            (click)="pageChanged(currentPage + 1)">></button>
+    </div>
+</div>
