@@ -1,0 +1,10 @@
+<figure class="mos-profile-pic">
+
+    <img #profileImage alt="User Pic" [src]="defaultImage" id="profile-image1" height="200">
+    <div class="profile-hover" (click)="openImageSelector()">
+        <i class="fas fa-camera"></i>
+    </div>
+    <input id="profile-image-upload" type="file" accept="image/png, image/jpeg"
+        (change)="onFileSelected($event.target)">
+
+</figure>

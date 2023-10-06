@@ -161,7 +161,10 @@ export class AppComponent implements AfterViewInit {
 
   contactAction(data: ContactDataAction) {
     console.log(data);
-    
+  }
+
+  getImage(event) {
+    console.log(event);
   }
 
 

@@ -15,7 +15,8 @@ import {
   UiToastModule,
   UiNoteModule,
   UiTableModule,
-  UiContactCardModule
+  UiContactCardModule,
+  UiProfileImageUploadModule
 } from 'projects/mos-design-system/src/public-api';
 
 @NgModule({
@@ -36,7 +37,8 @@ import {
     UiToastModule,
     UiNoteModule,
     UiTableModule,
-    UiContactCardModule
+    UiContactCardModule,
+    UiProfileImageUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,6 +26,10 @@ export * from './molecules/ui-toast/ui-toast/ui-toast.component';
 export * from './molecules/ui-note/ui-note.module';
 export * from './molecules/ui-note/ui-note/ui-note.component';
 
+/** UI Profile Image Upload */
+export * from './molecules/ui-profile-image-upload/ui-profile-image-upload.module';
+export * from './molecules/ui-profile-image-upload/ui-profile-image-upload/ui-profile-image-upload.component';
+
 /** UI Header */
 export * from './organisms/ui-header/ui-header.module';
 export * from './organisms/ui-header/ui-header/ui-header.component';
