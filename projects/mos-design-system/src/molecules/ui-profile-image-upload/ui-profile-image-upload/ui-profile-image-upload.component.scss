@@ -1,0 +1,51 @@
+@import "../../../styles/variables";
+
+$mos-image-color: #ffffff00;
+$mos-hover-image-color: rgb(0 0 0 / 48%);
+
+.mos-profile-pic {
+    height:220px;
+    width:220px;
+    padding: 10px;
+    position: relative;
+
+    img{
+        background-color: $mos-white-color;
+        border-radius: 50%;
+        box-shadow: $mos-box-shadow;
+        cursor: pointer;
+        width: 200px;
+        height: 200px;
+    }
+    #profile-image-upload {
+        display: none;
+    }
+    .profile-hover {
+        background-color: $mos-image-color;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 10px;
+        transition: all 0.2s ease-in-out;
+        i {
+            position: absolute;
+            display: none;
+            right: 41%;
+            top: 41%;
+            transition: all 0.2s ease-in-out;
+            font-size: 35px;
+        }
+        &:hover {
+            background: $mos-hover-image-color;
+        }
+        &:hover > i {
+            display: block;
+        }
+    }
+}
+
+
+
+
