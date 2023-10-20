@@ -7,3 +7,4 @@
 | 0.2.0   | Login adjustments   
 | 0.3.0   | Table, card contact and profile image uploader components   
 | 0.3.1   | General styles fixed   
+| 0.3.2   | Modal position and forgot password link fixed

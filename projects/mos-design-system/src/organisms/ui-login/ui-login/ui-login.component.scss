@@ -76,6 +76,10 @@
 		.forgot-password {
 			margin-top: 30px;
 			text-align: center;
+			a {
+				color: $mos-secondary-color;
+				cursor: pointer;
+			}
 		}
 	}
 	.mos-login label{
