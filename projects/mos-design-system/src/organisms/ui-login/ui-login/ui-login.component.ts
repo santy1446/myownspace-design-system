@@ -8,11 +8,19 @@ const PASSWORD_REGEX = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])
   styleUrls: ['./ui-login.component.scss']
 })
 export class UiLoginComponent {
-  @Output() emitRegisterData = new EventEmitter<RegisterData>();
-  @Output() emitLoginData = new EventEmitter<LoginData>();
-  @Input() regexPassword: string = PASSWORD_REGEX; 
   singUpForm : FormGroup;
   singInForm : FormGroup;
+  @Output() emitRegisterData = new EventEmitter<RegisterData>();
+  @Output() emitLoginData = new EventEmitter<LoginData>();
+  @Output() emitResetPassword = new EventEmitter<boolean>();
+  @Input() regexPassword: string = PASSWORD_REGEX; 
+  @Input() showLoginForm: boolean = false; 
+  @Input() set resetForms(value: boolean) {
+    this.singInForm.reset();
+    this.singUpForm.reset();
+  }
+
+  
 
   constructor(private formBuilder: FormBuilder) {
     this.singUpForm = formBuilder.group({
@@ -67,6 +75,10 @@ export class UiLoginComponent {
     const matchPassword = controlField.value === 
     this.singUpForm.controls["singUpPassword"].value; 
     return !matchPassword && controlField.dirty || controlField.touched && !matchPassword;
+  }
+
+  onResetPassword(): void {
+    this.emitResetPassword.emit(true);
   }
 
 }

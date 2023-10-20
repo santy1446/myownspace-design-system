@@ -6,3 +6,4 @@
 | 0.1.0   | note component, toggle header fixed, loader and modal z-index fixed   
 | 0.2.0   | Login adjustments   
 | 0.3.0   | Table, card contact and profile image uploader components   
+| 0.3.1   | General styles fixed   

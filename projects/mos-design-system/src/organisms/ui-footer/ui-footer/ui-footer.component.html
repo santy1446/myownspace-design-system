@@ -13,7 +13,7 @@
             <div class="mos-footer__footer-col">
                 <h4>{{contactInfo.title}}</h4>
                 <div class="mos-footer__social-links">
-                    <a *ngFor="let icons of contactInfo.buttons"><i class="{{icons.icon}}" (click)="sendIconSelected(icons)"></i></a>
+                    <a *ngFor="let icons of contactInfo.buttons" (click)="sendIconSelected(icons)"><i class="{{icons.icon}}"></i></a>
                 </div>
             </div>
         </div>

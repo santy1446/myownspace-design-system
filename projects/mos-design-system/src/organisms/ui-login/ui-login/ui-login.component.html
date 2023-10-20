@@ -1,5 +1,5 @@
 <div class="mos-auth">
-    <input type="checkbox" id="chk" aria-hidden="true">
+    <input type="checkbox" id="chk" aria-hidden="true" [(ngModel)]="showLoginForm">
 
     <div class="mos-signup">
         <form [formGroup] = "singUpForm" (ngSubmit) = "onSingUpSubmit()">
@@ -36,6 +36,9 @@
             </div>
             <input type="password" name="pswd" placeholder="Password" formControlName = "singInPassword">
             <button>Login</button>
+            <div class="forgot-password">
+                <a href="#" role="button" (click)="onResetPassword()">¿Forgot password?</a>
+            </div>
         </form>
     </div>
 </div>

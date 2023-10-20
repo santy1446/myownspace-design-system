@@ -10,6 +10,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('myModal') myTestModal: UiModalComponent = {} as any;
   @ViewChild('myLoader') myTestLoader: UiLoaderComponent = {} as any;
   @ViewChild('myToast') myToast: UiToastComponent = {} as any;
+  resetForm: boolean = false;
 
   ngAfterViewInit() {}
 
@@ -181,6 +182,15 @@ export class AppComponent implements AfterViewInit {
 
   showLoginData(event : any): void{
     console.log(event);
+  }
+
+  userWantsResetPassword(event: any) {
+    console.log("hola");
+    
+  }
+
+  resetLoginForm() {
+    this.resetForm = !this.resetForm; 
   }
 
   showRegisterData(event : any): void{
