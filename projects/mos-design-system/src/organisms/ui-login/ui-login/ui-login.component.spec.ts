@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiLoginComponent } from './ui-login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('UiLoginComponent', () => {
   let component: UiLoginComponent;
@@ -10,7 +10,7 @@ describe('UiLoginComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ UiLoginComponent ],
-      imports: [ReactiveFormsModule]
+      imports: [ReactiveFormsModule, FormsModule]
     })
     .compileComponents();
 
@@ -46,6 +46,20 @@ describe('UiLoginComponent', () => {
   it('should emit emitLoginData when onSingInSubmit is called', () => {
     const EMIT_SPY = spyOn(component.emitLoginData, "emit");
     component.onSingInSubmit();
+    expect(EMIT_SPY).toHaveBeenCalled();
+  });
+
+  it('should reset form when resetForms change value', () => {
+    const SIGNUP_SPY = spyOn(component.singUpForm, "reset");
+    const SIGNIN_SPY = spyOn(component.singInForm, "reset");
+    component.resetForms = true;
+    expect(SIGNUP_SPY).toHaveBeenCalled();
+    expect(SIGNIN_SPY).toHaveBeenCalled();
+  });
+
+  it('should emit emitResetPassword when onResetPassword is called', () => {
+    const EMIT_SPY = spyOn(component.emitResetPassword, "emit");
+    component.onResetPassword();
     expect(EMIT_SPY).toHaveBeenCalled();
   });
 });

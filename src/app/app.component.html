@@ -37,10 +37,10 @@
 
         </mos-ui-note>
 
-        <mos-ui-login (emitRegisterData)="showRegisterData($event)" (emitLoginData)="showLoginData($event)">
+        <mos-ui-login [resetForms]="resetForm" (emitRegisterData)="showRegisterData($event)" (emitLoginData)="showLoginData($event)" (emitResetPassword)="userWantsResetPassword($event)">
         </mos-ui-login>
 
-
+        <button mosUiButton class="mos-button-secondary" (click)="resetLoginForm()">Reset</button>
     </div>
 </mos-ui-animated-container>
 
